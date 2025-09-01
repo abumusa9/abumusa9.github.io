@@ -5,6 +5,9 @@ import { Mail, MapPin, Phone, Send, Github, Linkedin, ExternalLink, MessageCircl
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
+
 
 const Contact = () => {
   const ref = useRef(null);
@@ -13,7 +16,8 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    captcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -21,22 +25,22 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex.chen@email.com',
-      href: 'mailto:alex.chen@email.com',
+      value: 'scholarshipasa9@gmail.com',
+      href: 'mailto:scholarshipasa9@gmail.com',
       description: 'Best way to reach me'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Kano, Nigeria',
       href: null,
       description: 'Open to remote work'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+234 (814) 078-0307',
+      href: 'tel:+2348140780307',
       description: 'Available during business hours'
     }
   ];
@@ -45,24 +49,24 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/alexchen',
+      href: 'https://linkedin.com/in/abdussalam-shehu-0750061b3',
       color: 'hover:text-blue-600',
       description: 'Professional network'
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/alexchen',
+      href: 'https://github.com/abumusa9',
       color: 'hover:text-gray-800 dark:hover:text-gray-200',
       description: 'Code repositories'
     },
-    {
+    /*{
       name: 'Google Scholar',
       icon: ExternalLink,
-      href: 'https://scholar.google.com/citations?user=alexchen',
+      href: 'https://scholar.google.com/citations?user=scholarshipasa9',
       color: 'hover:text-blue-500',
       description: 'Research publications'
-    }
+    }*/
   ];
 
   const handleInputChange = (e) => {
@@ -76,22 +80,47 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    setIsSubmitting(false);
-    
-    // In a real application, you would send the data to your backend
-    alert('Thank you for your message! I\'ll get back to you soon.');
-  };
+
+    // Basic spam check
+    const honeypot = e.target.honeypot?.value;
+      if (honeypot) {
+        alert("Spam detected.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      // reCAPTCHA validation
+      if (!formData.captcha) {
+        alert("Please complete the CAPTCHA.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      try {
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            'g-recaptcha-response': formData.captcha,
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
+
+        alert("Message sent successfully!");
+        setFormData({ name: '', email: '', subject: '', message: '', captcha: '' });
+      } catch (error) {
+        console.error('Email send failed:', error);
+        alert("There was an error. Please try again later.");
+      }
+
+      setIsSubmitting(false);
+    };
+
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -220,97 +249,106 @@ const Contact = () => {
                   <h3 className="text-2xl font-semibold text-foreground">Send a Message</h3>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Name *
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your full name"
-                        className="w-full"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email *
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        className="w-full"
-                      />
-                    </div>
-                  </div>
+                <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
+                  {/* Honeypot field (invisible to users) */}
+                  <input
+                    type="text"
+                    name="honeypot"
+                    style={{ display: 'none' }}
+                    onChange={() => {}}
+                  />
 
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Subject *
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      required
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What's this about?"
-                      className="w-full"
-                    />
-                  </div>
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Name *</label>
+          <Input
+            id="name"
+            name="name"
+            type="text"
+            required
+            value={formData.name}
+            onChange={handleInputChange}
+            placeholder="Your full name"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">Email *</label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            required
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="your@email.com"
+          />
+        </div>
+      </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message *
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me about your project, opportunity, or how we can collaborate..."
-                      rows={6}
-                      className="w-full resize-none"
-                    />
-                  </div>
+      <div>
+        <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">Subject *</label>
+        <Input
+          id="subject"
+          name="subject"
+          type="text"
+          required
+          value={formData.subject}
+          onChange={handleInputChange}
+          placeholder="e.g. Research, Fulltime Job or Freelance Project Inquiry"
+        />
+      </div>
 
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full"
-                    size="lg"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send size={18} className="mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Message *</label>
+        <Textarea
+          id="message"
+          name="message"
+          required
+          draggable={false}
+          value={formData.message}
+          onChange={handleInputChange}
+          placeholder="How can I help you?"
+          className="w-full resize-none"
+          rows={6}
+        />
+      </div>
+
+      {/* reCAPTCHA */}
+      <div className="flex justify-center">
+        <div className="my-4">
+          <ReCAPTCHA
+            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            onChange={(value) => setFormData(prev => ({ ...prev, captcha: value }))}
+          />
+        </div>
+      </div>
+
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full"
+        size="lg"
+      >
+        {isSubmitting ? (
+          <>
+            <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2"></div>
+            Sending...
+          </>
+        ) : (
+          <>
+            <Send size={18} className="mr-2" />
+            Send Message
+          </>
+        )}
+      </Button>
+    </form>
+
 
                 <div className="mt-6 pt-6 border-t border-border">
                   <p className="text-sm text-muted-foreground text-center">
                     I typically respond within 24 hours. For urgent matters, 
                     feel free to reach out via{' '}
-                    <a href="mailto:alex.chen@email.com" className="text-primary hover:text-primary/80">
+                    <a href="mailto:scholarshipasa9@gmail.com" className="text-primary hover:text-primary/80">
                       email
                     </a>{' '}
                     directly.

@@ -50,7 +50,7 @@ const Header = () => {
               onClick={() => scrollToSection('#home')}
               className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
             >
-              Alex Chen
+              Abdussalam Shehu
             </button>
           </div>
 
@@ -70,17 +70,13 @@ const Header = () => {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-2">
             <ThemeToggle />
-            <Button
-              variant="outline"
-              onClick={() => {
-                // This would typically download a resume PDF
-                console.log('Download resume');
-              }}
-              className="font-medium"
-            >
-              Resume
-            </Button>
+            <a href="/scholarshipCV.pdf" download>
+              <Button variant="outline" className="font-medium">
+                Resume
+              </Button>
+            </a>
           </div>
+
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-2">
@@ -110,17 +106,16 @@ const Header = () => {
                 </button>
               ))}
               <div className="px-3 py-2">
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    console.log('Download resume');
-                    setIsMenuOpen(false);
-                  }}
-                  className="w-full font-medium"
-                >
-                  Resume
-                </Button>
+                <a href="/scholarshipCV.pdf" download onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    variant="outline"
+                    className="w-full font-medium"
+                  >
+                    Resume
+                  </Button>
+                </a>
               </div>
+
             </div>
           </div>
         )}

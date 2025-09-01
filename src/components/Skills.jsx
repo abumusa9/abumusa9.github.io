@@ -17,8 +17,8 @@ const Skills = () => {
         { name: 'R', level: 85, description: 'Statistical analysis and data science' },
         { name: 'SQL', level: 90, description: 'Database querying and management' },
         { name: 'JavaScript', level: 80, description: 'Web development and visualization' },
-        { name: 'C++', level: 75, description: 'Performance-critical applications' },
-        { name: 'Java', level: 70, description: 'Enterprise applications' },
+        /*{ name: 'C++', level: 75, description: 'Performance-critical applications' },
+        { name: 'Java', level: 70, description: 'Enterprise applications' },*/
       ],
     },
     ml: {

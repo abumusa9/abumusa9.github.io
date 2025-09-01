@@ -9,7 +9,7 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, threshold: 0.1 });
 
   const experiences = [
-    {
+    /*{
       id: 1,
       type: 'work',
       title: 'Senior AI Engineer',
@@ -80,21 +80,21 @@ const Experience = () => {
       ],
       technologies: ['Python', 'Transformers', 'JAX', 'TensorFlow', 'BERT', 'GPT'],
       icon: Briefcase
-    },
+    }*/,
     {
       id: 5,
       type: 'work',
       title: 'Data Science Intern',
-      company: 'Microsoft AI',
-      location: 'Redmond, WA',
-      period: 'Jun 2022 - Aug 2022',
+      company: 'Dabolinux Technology',
+      location: 'Kano, Nigeria',
+      period: 'Jun 2020 - Aug 2024',
       current: false,
       description: 'Worked on natural language processing projects for Azure Cognitive Services.',
       achievements: [
-        'Developed sentiment analysis model with 94% accuracy',
+        'Developed sentiment analysis model with 90% accuracy',
         'Optimized NLP pipeline reducing latency by 30%',
         'Created automated testing framework for ML models',
-        'Contributed to Azure Cognitive Services documentation'
+        /*'Contributed to Azure Cognitive Services documentation'*/
       ],
       technologies: ['Python', 'Azure', 'BERT', 'PyTorch', 'Docker', 'Azure DevOps'],
       icon: Briefcase
@@ -102,19 +102,19 @@ const Experience = () => {
     {
       id: 6,
       type: 'education',
-      title: 'Bachelor of Science in Computer Science',
-      company: 'Stanford University',
-      location: 'Stanford, CA',
-      period: 'Sep 2020 - Jun 2024',
+      title: 'Bachelor of Science in Electronics',
+      company: 'Bayero University, Kano',
+      location: 'Kano, Nigeria',
+      period: '2014 - 2018',
       current: false,
-      description: 'Specialized in Artificial Intelligence with focus on machine learning and computer vision.',
+      description: 'Specialized in intelligent systems, signal processing, and embedded systems with a growing focus on machine learning and data-driven technologies.',
       achievements: [
-        'Magna Cum Laude, GPA: 3.8/4.0',
-        'President of AI/ML Student Society',
-        'Winner of Stanford AI Hackathon 2023',
-        'Dean\'s List for 6 consecutive semesters'
+        'CGPA: 3.6/5.0',
+        'Completed online specializations in Machine Learning, Deep Learning, and AI (Coursera, WQU)',
+        'Top 10% of class in Advanced Mathematics and Digital Systems Design',
+        
       ],
-      technologies: ['Computer Science', 'AI/ML', 'Algorithms', 'Data Structures', 'Mathematics', 'Statistics'],
+      technologies: ['Electronics','Computer Science', 'AI/ML', 'Algorithms', 'Data Structures', 'Mathematics', 'Statistics'],
       icon: GraduationCap
     }
   ];

@@ -32,27 +32,27 @@ const Hero = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/alexchen',
+      href: 'https://linkedin.com/in/abdussalam-shehu-0750061b3',
       color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/alexchen',
+      href: 'https://github.com/abumusa9',
       color: 'hover:text-gray-800 dark:hover:text-gray-200',
     },
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:alex.chen@email.com',
+      href: 'mailto:scholarshipasa9@gmail.com',
       color: 'hover:text-red-600',
     },
-    {
+    /*{
       name: 'Google Scholar',
       icon: ExternalLink,
-      href: 'https://scholar.google.com/citations?user=alexchen',
+      href: 'https://scholar.google.com/citations?user=scholarshipasa9',
       color: 'hover:text-blue-500',
-    },
+    },*/
   ];
 
   return (
@@ -98,7 +98,13 @@ const Hero = () => {
           >
             <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary to-accent p-1">
               <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-6xl font-bold text-primary">
-                AC
+                <img
+                  src="/images/abumus9.png"
+                  alt="Abdussalam"
+                  className="rounded-full w-full h-full object-cover"
+                />
+
+
               </div>
             </div>
           </motion.div>
@@ -110,7 +116,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4"
           >
-            Alex Chen
+            Abdussalam Shehu
           </motion.h1>
 
           <motion.h2
@@ -119,7 +125,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6"
           >
-            AI Engineer & Machine Learning Researcher
+            AI Engineer & Machine Learning Researcher | Financial Engineering Enthusiast
           </motion.h2>
 
           {/* Typing Animation */}
@@ -147,16 +153,21 @@ const Hero = () => {
             >
               View My Work
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                console.log('Download resume');
-              }}
-              className="text-lg px-8 py-3"
-            >
-              Download Resume
-            </Button>
+              <a
+                href="/scholarshipCV.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 py-3"
+                >
+                  Download Resume
+                </Button>
+              </a>
+
           </motion.div>
 
           {/* Social Links */}

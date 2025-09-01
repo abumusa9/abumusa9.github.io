@@ -9,27 +9,27 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/alexchen',
+      href: 'https://linkedin.com/in/abdussalam-shehu-0750061b3',
       color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/alexchen',
+      href: 'https://github.com/abumusa9',
       color: 'hover:text-gray-800 dark:hover:text-gray-200',
     },
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:alex.chen@email.com',
+      href: 'mailto:scholarshipasa9@gmail.com',
       color: 'hover:text-red-600',
     },
-    {
+    /*{
       name: 'Google Scholar',
       icon: ExternalLink,
-      href: 'https://scholar.google.com/citations?user=alexchen',
+      href: 'https://scholar.google.com/citations?user=scholarshipasa9',
       color: 'hover:text-blue-500',
-    },
+    },*/
   ];
 
   const quickLinks = [
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* About Section */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">Alex Chen</h3>
+              <h3 className="text-xl font-semibold text-foreground">Abdussalam Shehu</h3>
               <p className="text-muted-foreground">
                 AI Engineer & Machine Learning Researcher passionate about creating 
                 intelligent solutions that drive innovation and make a positive impact.
@@ -107,14 +107,14 @@ const Footer = () => {
                 <p className="text-muted-foreground">
                   <strong>Email:</strong>{' '}
                   <a
-                    href="mailto:alex.chen@email.com"
+                    href="mailto:scholarshipasa9@gmail.com"
                     className="text-primary hover:text-primary/80 transition-colors"
                   >
-                    alex.chen@email.com
+                    scholarshipasa9@gmail.com
                   </a>
                 </p>
                 <p className="text-muted-foreground">
-                  <strong>Location:</strong> San Francisco, CA
+                  <strong>Location:</strong> Kano, Nigeria
                 </p>
                 <p className="text-muted-foreground">
                   <strong>Status:</strong>{' '}
@@ -137,14 +137,14 @@ const Footer = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>© {currentYear} Alex Chen. Built with</span>
+              <span>© {currentYear} Abdussalam Shehu. Built with</span>
               <Heart size={16} className="text-red-500" />
               <span>and modern web technologies.</span>
             </div>
             
             <div className="flex items-center gap-4">
               <div className="text-sm text-muted-foreground">
-                Made with React, Tailwind CSS & Framer Motion
+                {/* Made with React, Tailwind CSS & Framer Motion */}
               </div>
               <Button
                 variant="outline"

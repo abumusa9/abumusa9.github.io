@@ -16,7 +16,7 @@ const About = () => {
     },
     {
       icon: Award,
-      number: '8',
+      number: '3',
       label: 'Certifications',
       description: 'Professional certifications',
     },
@@ -28,7 +28,7 @@ const About = () => {
     },
     {
       icon: Users,
-      number: '5',
+      number: '4',
       label: 'Languages',
       description: 'Programming languages',
     },
@@ -115,15 +115,13 @@ const About = () => {
                 </p>
                 
                 <p className="text-foreground/90 mb-6 leading-relaxed">
-                  Currently pursuing my <strong className="text-primary">Master's in Data Science</strong>, I'm dedicated to 
+                  Currently pursuing <strong className="text-primary">Certifications, in Data Science and Artificial Intelligence</strong>, I'm dedicated to 
                   pushing the boundaries of AI innovation. I specialize in transforming complex data into 
                   actionable insights and building scalable machine learning systems that solve real-world problems.
                 </p>
 
                 <p className="text-foreground/90 mb-6 leading-relaxed">
-                  My work has been published in leading conferences and journals, and I've successfully 
-                  deployed AI models that have improved operational efficiency by up to 95% in various 
-                  industries. I'm particularly interested in the intersection of AI and healthcare, 
+                  I'm particularly interested in the intersection of AI and healthcare, 
                   autonomous systems, and ethical AI development.
                 </p>
 

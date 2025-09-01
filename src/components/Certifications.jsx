@@ -12,31 +12,31 @@ const Certifications = () => {
   const certifications = [
     {
       id: 1,
-      name: 'Google Cloud Professional Machine Learning Engineer',
-      issuer: 'Google Cloud',
-      date: '2024',
-      credentialId: 'GCP-ML-2024-001',
-      verifyUrl: 'https://cloud.google.com/certification/machine-learning-engineer',
-      logo: '🔵', // Placeholder for Google Cloud logo
-      description: 'Demonstrates expertise in designing, building, and productionizing ML models on Google Cloud Platform.',
-      skills: ['ML Pipeline Design', 'Model Deployment', 'AutoML', 'Vertex AI', 'BigQuery ML'],
+      name: 'Applied Data Science Lab',
+      issuer: 'WorldQuant University',
+      date: '2025',
+      /*credentialId: 'GCP-ML-2024-001',*/ 
+      verifyUrl: 'https://www.credly.com/badges/befebc31-a488-463b-8367-6820be4dfd14/public_url',
+      logo: '/images/applied-data-science-lab.2.png', // Placeholder for Google Cloud logo
+      description: 'Earners of this badge have completed eight end-to-end, applied data science projects. In each project, they accessed data from files, SQL and NoSQL databases and APIs. They have demonstrated their ability to explore and clean data, create functions and ETL pipelines to prepare training sets. They have built machine learning models for supervised and unsupervised learning tasks, and have created visualizations to explain data characteristics and model predictions for non-technical audiences.',
+      skills: ['Python (Programming Language)', 'Data Science', 'Data Visualization', 'Machine Learning', 'MongoDB', 'API Design', 'SQL', 'Statistics'],
       featured: true,
       status: 'active'
     },
     {
       id: 2,
-      name: 'AWS Certified Machine Learning - Specialty',
-      issuer: 'Amazon Web Services',
-      date: '2024',
-      credentialId: 'AWS-MLS-2024-002',
-      verifyUrl: 'https://aws.amazon.com/certification/certified-machine-learning-specialty/',
-      logo: '🟠', // Placeholder for AWS logo
-      description: 'Validates expertise in building, training, tuning, and deploying ML models on AWS.',
-      skills: ['SageMaker', 'Data Engineering', 'Model Optimization', 'ML Security', 'Cost Optimization'],
+      name: 'Applied AI Lab: Deep Learning for Computer Vision',
+      issuer: 'WorldQuant University',
+      date: '2025',
+      /* credentialId: 'AWS-MLS-2024-002',*/
+      verifyUrl: 'https://www.credly.com/badges/96e0c045-8924-4ccb-8749-badce46c9f86/public_url',
+      logo: '/images/applied-ai-lab-deep-learning-for-computer-vision.png', // Placeholder for AWS logo
+      description: 'Earners of this badge completed six end-to-end PyTorch computer vision projects. From data preparation, cleaning and transformation pipelines to mastering deep learning models like MLPs, CNNs, and transformers, they tackled tasks like image classification, object detection, and generative AI. They applied transfer learning and self-regulated learning, explored software libraries, and debugged code while considering core values and ethical and environmental concerns faced by AI scientists.',
+      skills: ['Artificial Intelligence (AI)', 'Data Science', 'Deep Learning', 'Facenet', 'Facial Recognition', 'Flask', 'Generative Adversarial Networks (GANs)', 'HuggingFace diffusers', 'HuggingFace Hub', 'HuggingFace transformers', 'Image Classification', 'Image Generation', 'Machine Learning', 'Matplotlib', 'MediGan', 'Neural Networks', 'Numpy', 'Object Detection', 'OpenCV', 'python', 'Pandas', 'PyTorch', 'Sciki-learn', 'Stable Diffusion', 'Supervised Learning', 'Ultralytics YOLOv8'],
       featured: true,
       status: 'active'
     },
-    {
+    /*{
       id: 3,
       name: 'TensorFlow Developer Certificate',
       issuer: 'TensorFlow',
@@ -113,7 +113,7 @@ const Certifications = () => {
       skills: ['Image Processing', 'Object Detection', 'Facial Recognition', 'SLAM', 'Deep Learning for CV'],
       featured: false,
       status: 'active'
-    }
+    }*/
   ];
 
   const containerVariants = {
@@ -175,7 +175,18 @@ const Certifications = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="text-3xl">{cert.logo}</div>
+                      <div className="h-10 w-10">
+                        {cert.logo.startsWith('/images/') ? (
+                          <img
+                            src={cert.logo}
+                            alt={cert.name}
+                            className="h-full w-auto object-contain"
+                          />
+                        ) : (
+                          <div className="text-3xl">{cert.logo}</div>
+                        )}
+                      </div>
+
                       <div className="flex items-center gap-2">
                         <Badge className="bg-primary/10 text-primary border-primary/20">
                           Featured
@@ -235,7 +246,7 @@ const Certifications = () => {
                   {/* Credential ID */}
                   <div className="mt-3 pt-3 border-t border-border">
                     <p className="text-xs text-muted-foreground">
-                      ID: {cert.credentialId}
+                       {cert.credentialId}
                     </p>
                   </div>
                 </motion.div>
@@ -246,7 +257,7 @@ const Certifications = () => {
           {/* Other Certifications */}
           <motion.div variants={itemVariants}>
             <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
-              Additional Certifications
+              {/*Additional Certifications */}
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
               {otherCerts.map((cert) => (
@@ -256,7 +267,18 @@ const Certifications = () => {
                   className="group bg-background p-4 rounded-lg border border-border hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="text-2xl">{cert.logo}</div>
+                    <div className="h-10 w-10">
+                      {cert.logo.startsWith('/images/') ? (
+                        <img
+                          src={cert.logo}
+                          alt={cert.name}
+                          className="h-full w-auto object-contain"
+                        />
+                      ) : (
+                        <div className="text-2xl">{cert.logo}</div>
+                      )}
+                    </div>
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
