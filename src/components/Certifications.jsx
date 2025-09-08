@@ -36,46 +36,46 @@ const Certifications = () => {
       featured: true,
       status: 'active'
     },
-    /*{
+    {
       id: 3,
-      name: 'TensorFlow Developer Certificate',
-      issuer: 'TensorFlow',
-      date: '2023',
-      credentialId: 'TF-DEV-2023-003',
-      verifyUrl: 'https://www.tensorflow.org/certificate',
+      name: 'Introduction to Generative AI',
+      issuer: 'Google',
+      date: '2025',
+      /*credentialId: 'TF-DEV-2023-003',*/
+      verifyUrl: 'https://www.cloudskillsboost.google/public_profiles/f5ebfaf1-5fa0-45fb-8049-dcba20eb58ab/badges/17738427',
       logo: '🟡', // Placeholder for TensorFlow logo
-      description: 'Demonstrates proficiency in using TensorFlow to solve deep learning and ML problems.',
-      skills: ['Neural Networks', 'Computer Vision', 'NLP', 'Time Series', 'TensorFlow Lite'],
+      description: 'This is an introductory level microlearning course aimed at explaining what Generative AI is, how it is used, and how it differs from traditional machine learning methods.',
+      skills: ['Generative AI', 'NLP', 'Gen AI on Document AI'],
       featured: true,
       status: 'active'
     },
-    {
+    /*{
       id: 4,
-      name: 'Deep Learning Specialization',
-      issuer: 'Coursera (DeepLearning.AI)',
-      date: '2023',
+      name: 'Introduction to Large Language Models',
+      issuer: 'Google',
+      date: '2025',
       credentialId: 'DL-SPEC-2023-004',
-      verifyUrl: 'https://coursera.org/verify/specialization/XXXXXXXX',
+      verifyUrl: 'https://www.cloudskillsboost.google/public_profiles/f5ebfaf1-5fa0-45fb-8049-dcba20eb58ab/badges/17809968',
       logo: '🔷', // Placeholder for Coursera logo
-      description: 'Comprehensive specialization covering neural networks, deep learning, and their applications.',
-      skills: ['Neural Networks', 'CNN', 'RNN', 'Hyperparameter Tuning', 'Sequence Models'],
+      description: 'This is an introductory level micro-learning course that explores what large language models (LLM) are, the use cases where they can be utilized, and how you can use prompt tuning to enhance LLM performance.',
+      skills: ['Generative AI', 'NLP', 'Gen AI on Document AI'],
       featured: false,
       status: 'active'
-    },
+    },*/
     {
       id: 5,
-      name: 'Microsoft Azure AI Engineer Associate',
-      issuer: 'Microsoft',
-      date: '2023',
-      credentialId: 'AZ-AI-2023-005',
-      verifyUrl: 'https://docs.microsoft.com/en-us/learn/certifications/azure-ai-engineer',
-      logo: '🔵', // Placeholder for Microsoft logo
-      description: 'Validates skills in designing and implementing AI solutions using Azure Cognitive Services.',
-      skills: ['Azure Cognitive Services', 'Bot Framework', 'Computer Vision API', 'Speech Services', 'Language Understanding'],
-      featured: false,
+      name: 'Data Science',
+      issuer: 'Forage',
+      date: '2025',
+      credentialId: 'GZbzxe3wMwQ95QGNM',
+      /*verifyUrl: 'https://docs.microsoft.com/en-us/learn/certifications/azure-ai-engineer',*/
+      logo: '🟡', // Placeholder for Microsoft logo
+      description: 'Completed a job simulation involving customer churn prediction for the Data Science & Analytics team at Lloyds Banking Group',
+      skills: ['Algorithm Selection and Model Building', 'Communication of Findings', 'Communication of Findings', 'Data Visualisation and Analysis', 'Exploratory Data Analysis (EDA)'],
+      featured: true,
       status: 'active'
     },
-    {
+    /*{
       id: 6,
       name: 'Machine Learning Engineering for Production (MLOps)',
       issuer: 'Coursera (DeepLearning.AI)',

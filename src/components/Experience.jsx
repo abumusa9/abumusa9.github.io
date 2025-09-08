@@ -87,16 +87,16 @@ const Experience = () => {
       title: 'Data Science Intern',
       company: 'Dabolinux Technology',
       location: 'Kano, Nigeria',
-      period: 'Jun 2020 - Aug 2024',
+      period: 'Jun 2021 - Aug 2024',
       current: false,
-      description: 'Worked on natural language processing projects for Azure Cognitive Services.',
+      description: 'Worked on natural language processing projects for AWS',
       achievements: [
         'Developed sentiment analysis model with 90% accuracy',
         'Optimized NLP pipeline reducing latency by 30%',
         'Created automated testing framework for ML models',
         /*'Contributed to Azure Cognitive Services documentation'*/
       ],
-      technologies: ['Python', 'Azure', 'BERT', 'PyTorch', 'Docker', 'Azure DevOps'],
+      technologies: ['Python', 'AWS', 'BERT', 'PyTorch', 'Docker'],
       icon: Briefcase
     },
     {
@@ -105,11 +105,11 @@ const Experience = () => {
       title: 'Bachelor of Science in Electronics',
       company: 'Bayero University, Kano',
       location: 'Kano, Nigeria',
-      period: '2014 - 2018',
+      period: '2015 - 2019',
       current: false,
       description: 'Specialized in intelligent systems, signal processing, and embedded systems with a growing focus on machine learning and data-driven technologies.',
       achievements: [
-        'CGPA: 3.6/5.0',
+        'CGPA Scale: 3.6/5.0',
         'Completed online specializations in Machine Learning, Deep Learning, and AI (Coursera, WQU)',
         'Top 10% of class in Advanced Mathematics and Digital Systems Design',
         

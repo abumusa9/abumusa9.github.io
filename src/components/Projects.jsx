@@ -11,7 +11,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    {
+    /*{
       id: 1,
       title: 'AI-Powered Medical Diagnosis System',
       description: 'Deep learning model for automated medical image analysis and diagnosis. Achieved 94% accuracy in detecting pneumonia from chest X-rays using CNN architecture.',
@@ -27,8 +27,8 @@ const Projects = () => {
         dataset: '10K+ images',
         performance: '< 2s inference'
       }
-    },
-    {
+    }*/,
+   /* {
       id: 2,
       title: 'Real-time Sentiment Analysis Platform',
       description: 'NLP-powered platform for analyzing social media sentiment in real-time. Processes 1M+ tweets daily with 92% accuracy using transformer models.',
@@ -44,7 +44,7 @@ const Projects = () => {
         throughput: '1M+ tweets/day',
         latency: '< 100ms'
       }
-    },
+    }*/,
     {
       id: 3,
       title: 'Computer Vision for Autonomous Vehicles',
@@ -53,16 +53,16 @@ const Projects = () => {
       image: '/api/placeholder/400/250',
       category: 'computer-vision',
       technologies: ['Python', 'YOLO', 'PyTorch', 'CUDA', 'ROS'],
-      github: 'https://github.com/alexchen/autonomous-vision',
-      demo: null,
+      github: 'https://github.com/abumusa9/object-detection',
+      demo: "https://objectdetector.mooo.com",
       featured: true,
       metrics: {
         accuracy: '98%',
         fps: '30 FPS',
-        objects: '15+ classes'
+        objects: '80 classes'
       }
     },
-    {
+    /*{
       id: 4,
       title: 'Recommendation Engine for E-commerce',
       description: 'Machine learning-based recommendation system that increased user engagement by 35% and sales conversion by 28% using collaborative filtering.',
@@ -78,7 +78,7 @@ const Projects = () => {
         conversion: '+28%',
         users: '100K+ active'
       }
-    },
+    }*/,
     {
       id: 5,
       title: 'Time Series Forecasting Dashboard',
@@ -86,26 +86,26 @@ const Projects = () => {
       longDescription: 'Created an interactive web application for financial forecasting using LSTM neural networks. Features real-time data ingestion, model training, and visualization of predictions with uncertainty quantification.',
       image: '/api/placeholder/400/250',
       category: 'ml',
-      technologies: ['Python', 'LSTM', 'Streamlit', 'Yahoo Finance API', 'Plotly'],
-      github: 'https://github.com/alexchen/time-series-forecasting',
-      demo: 'https://forecasting-dashboard.com',
+      technologies: ['Python', 'LSTM', 'React', 'Yahoo Finance API'],
+      github: 'https://github.com/abumusa9/financial-forecasting-app',
+      demo: 'https://forecast-app.mooo.com',
       featured: false,
       metrics: {
         accuracy: '87%',
-        stocks: '500+ symbols',
+        stocks: '10 symbols',
         updates: 'Real-time'
       }
     },
     {
       id: 6,
-      title: 'Chatbot with Natural Language Understanding',
-      description: 'Intelligent chatbot with advanced NLU capabilities. Handles customer service queries with 89% resolution rate using transformer architecture.',
-      longDescription: 'Developed an intelligent chatbot system with advanced natural language understanding capabilities. Uses transformer-based models for intent recognition and entity extraction.',
+      title: 'Chatbot with Natural Language Understanding || This Project is in Progress.',
+      description: 'Developing an intelligent chatbot with advanced NLU capabilities. It will handle customer service queries with 89% resolution rate using transformer architecture.',
+      longDescription: 'Developing an intelligent chatbot system with advanced natural language understanding capabilities. Will use transformer-based models for intent recognition and entity extraction.',
       image: '/api/placeholder/400/250',
       category: 'nlp',
       technologies: ['Python', 'Transformers', 'Rasa', 'FastAPI', 'MongoDB'],
-      github: 'https://github.com/alexchen/intelligent-chatbot',
-      demo: 'https://chatbot-demo.com',
+      github: null,
+      demo: null,
       featured: false,
       metrics: {
         resolution: '89%',
@@ -116,7 +116,7 @@ const Projects = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Projects', count: projects.length },
+    { id: 'all', name: 'All Projects', count: 3 /*projects.length*/ },
     { id: 'computer-vision', name: 'Computer Vision', count: projects.filter(p => p.category === 'computer-vision').length },
     { id: 'nlp', name: 'NLP', count: projects.filter(p => p.category === 'nlp').length },
     { id: 'ml', name: 'Machine Learning', count: projects.filter(p => p.category === 'ml').length },

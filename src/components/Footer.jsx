@@ -137,9 +137,9 @@ const Footer = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>© {currentYear} Abdussalam Shehu. Built with</span>
-              <Heart size={16} className="text-red-500" />
-              <span>and modern web technologies.</span>
+              <span>© Abdussalam Shehu</span>
+             {/* <Heart size={16} className="text-red-500" />*/}
+              <span></span>
             </div>
             
             <div className="flex items-center gap-4">
