@@ -16,7 +16,7 @@ const About = () => {
     },
     {
       icon: Award,
-      number: '7+',
+      number: '9+',
       label: 'Certifications',
       description: 'Professional certifications',
     },
