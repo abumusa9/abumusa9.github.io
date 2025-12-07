@@ -44,7 +44,7 @@ const Hero = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:scholarshipasa9@gmail.com',
+      href: 'mailto:abdussalam@abumusalab.com.ng',
       color: 'hover:text-red-600',
     },
     /*{

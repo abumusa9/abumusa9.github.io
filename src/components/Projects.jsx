@@ -11,40 +11,40 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    /*{
+    {
       id: 1,
-      title: 'AI-Powered Medical Diagnosis System',
+      title: 'AI-Powered Medical Diagnosis System || Coming Soon',
       description: 'Deep learning model for automated medical image analysis and diagnosis. Achieved 94% accuracy in detecting pneumonia from chest X-rays using CNN architecture.',
-      longDescription: 'Developed a comprehensive medical diagnosis system using deep learning techniques. The system processes chest X-ray images and provides accurate pneumonia detection with 94% accuracy. Implemented using TensorFlow and deployed on AWS for real-time inference.',
+      longDescription: 'Developing a comprehensive medical diagnosis system using deep learning techniques. The system processes chest X-ray images and provides accurate pneumonia detection with 94% accuracy. Implemented using TensorFlow and deployed on AWS for real-time inference.',
       image: '/api/placeholder/400/250',
       category: 'computer-vision',
       technologies: ['Python', 'TensorFlow', 'OpenCV', 'AWS', 'Flask'],
-      github: 'https://github.com/alexchen/medical-diagnosis',
-      demo: 'https://medical-ai-demo.com',
+      github: false,
+      demo: false,
       featured: true,
       metrics: {
         accuracy: '94%',
         dataset: '10K+ images',
         performance: '< 2s inference'
       }
-    }*/,
-   /* {
+    },
+   {
       id: 2,
-      title: 'Real-time Sentiment Analysis Platform',
+      title: 'Real-time Sentiment Analysis Platform || Coming Soon',
       description: 'NLP-powered platform for analyzing social media sentiment in real-time. Processes 1M+ tweets daily with 92% accuracy using transformer models.',
       longDescription: 'Built a scalable sentiment analysis platform that processes social media data in real-time. Uses BERT-based transformer models for high accuracy sentiment classification and provides interactive dashboards for insights.',
       image: '/api/placeholder/400/250',
       category: 'nlp',
       technologies: ['Python', 'BERT', 'Kafka', 'React', 'PostgreSQL'],
-      github: 'https://github.com/alexchen/sentiment-analysis',
-      demo: 'https://sentiment-platform.com',
+      github: false,
+      demo: false,
       featured: true,
       metrics: {
         accuracy: '92%',
         throughput: '1M+ tweets/day',
         latency: '< 100ms'
       }
-    }*/,
+    },
     {
       id: 3,
       title: 'Computer Vision for Autonomous Vehicles',
@@ -62,23 +62,23 @@ const Projects = () => {
         objects: '80 classes'
       }
     },
-    /*{
+    {
       id: 4,
-      title: 'Recommendation Engine for E-commerce',
+      title: 'Recommendation Engine for E-commerce || Coming Soon',
       description: 'Machine learning-based recommendation system that increased user engagement by 35% and sales conversion by 28% using collaborative filtering.',
       longDescription: 'Built a sophisticated recommendation engine using collaborative filtering and matrix factorization techniques. The system analyzes user behavior patterns to provide personalized product recommendations.',
       image: '/api/placeholder/400/250',
-      category: 'ml',
+      category: 'nlp',
       technologies: ['Python', 'Scikit-learn', 'Spark', 'Redis', 'Docker'],
-      github: 'https://github.com/alexchen/recommendation-engine',
-      demo: 'https://ecommerce-rec-demo.com',
+      github: false,
+      demo: false,
       featured: false,
       metrics: {
         engagement: '+35%',
         conversion: '+28%',
         users: '100K+ active'
       }
-    }*/,
+    },
     {
       id: 5,
       title: 'Time Series Forecasting Dashboard',
@@ -98,17 +98,17 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: 'Chatbot with Natural Language Understanding || This Project is in Progress.',
-      description: 'Developing an intelligent chatbot with advanced NLU capabilities. It will handle customer service queries with 89% resolution rate using transformer architecture.',
-      longDescription: 'Developing an intelligent chatbot system with advanced natural language understanding capabilities. Will use transformer-based models for intent recognition and entity extraction.',
+      title: 'Customer Churn Analysis Dashboard',
+      description: 'Developed Customer Churn Analysis Dashboard. This project presents a comprehensive customer churn analysis system that demonstrates advanced AI engineering capabilities through the integration of machine learning, backend API development, and interactive frontend visualization.',
+      longDescription: 'This project presents a comprehensive customer churn analysis system that demonstrates advanced AI engineering capabilities through the integration of machine learning, backend API development, and interactive frontend visualization. The system is designed to predict customer churn probability and provide actionable insights for business decision-making.',
       image: '/api/placeholder/400/250',
-      category: 'nlp',
-      technologies: ['Python', 'Transformers', 'Rasa', 'FastAPI', 'MongoDB'],
-      github: null,
-      demo: null,
+      category: 'ml',
+      technologies: ['Python', "Flask", "scikit-learn", "pandas", "React"],
+      github: "https://github.com/abumusa9/customer-churn-analysis-dashboard",
+      demo: "https://abumusalab.com.ng/customer-churn-analysis-dashboard/",
       featured: false,
       metrics: {
-        resolution: '89%',
+        accuracy: '85.4%',
         languages: '5 languages',
         response: '< 1s'
       }
@@ -116,7 +116,7 @@ const Projects = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Projects', count: 3 /*projects.length*/ },
+    { id: 'all', name: 'All Projects', count: 6 /*projects.length*/ },
     { id: 'computer-vision', name: 'Computer Vision', count: projects.filter(p => p.category === 'computer-vision').length },
     { id: 'nlp', name: 'NLP', count: projects.filter(p => p.category === 'nlp').length },
     { id: 'ml', name: 'Machine Learning', count: projects.filter(p => p.category === 'ml').length },

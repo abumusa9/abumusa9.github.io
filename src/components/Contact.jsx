@@ -25,8 +25,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'scholarshipasa9@gmail.com',
-      href: 'mailto:scholarshipasa9@gmail.com',
+      value: 'abdussalam@abumusalab.com.ng',
+      href: 'mailto:abdussalam@abumusalab.com.ng',
       description: 'Best way to reach me'
     },
     {
@@ -316,10 +316,10 @@ const Contact = () => {
       {/* reCAPTCHA */}
       <div className="flex justify-center">
         <div className="my-4">
-          <ReCAPTCHA
+         {/* <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
             onChange={(value) => setFormData(prev => ({ ...prev, captcha: value }))}
-          />
+          /> */}
         </div>
       </div>
 
@@ -348,7 +348,7 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground text-center">
                     I typically respond within 24 hours. For urgent matters, 
                     feel free to reach out via{' '}
-                    <a href="mailto:scholarshipasa9@gmail.com" className="text-primary hover:text-primary/80">
+                    <a href="mailto:abdussalam@abumusalab.com.ng" className="text-primary hover:text-primary/80">
                       email
                     </a>{' '}
                     directly.

@@ -49,19 +49,19 @@ const Certifications = () => {
       featured: true,
       status: 'active'
     },
-    /*{
+    {
       id: 4,
       name: 'Introduction to Large Language Models',
       issuer: 'Google',
       date: '2025',
-      credentialId: 'DL-SPEC-2023-004',
+      /*credentialId: 'DL-SPEC-2023-004',*/
       verifyUrl: 'https://www.cloudskillsboost.google/public_profiles/f5ebfaf1-5fa0-45fb-8049-dcba20eb58ab/badges/17809968',
       logo: '🔷', // Placeholder for Coursera logo
       description: 'This is an introductory level micro-learning course that explores what large language models (LLM) are, the use cases where they can be utilized, and how you can use prompt tuning to enhance LLM performance.',
       skills: ['Generative AI', 'NLP', 'Gen AI on Document AI'],
-      featured: false,
+      featured: true,
       status: 'active'
-    },*/
+    },
     {
       id: 5,
       name: 'Data Science',
@@ -75,45 +75,58 @@ const Certifications = () => {
       featured: true,
       status: 'active'
     },
-    /*{
+    {
       id: 6,
-      name: 'Machine Learning Engineering for Production (MLOps)',
-      issuer: 'Coursera (DeepLearning.AI)',
-      date: '2023',
-      credentialId: 'MLOPS-2023-006',
-      verifyUrl: 'https://coursera.org/verify/specialization/YYYYYYYY',
+      name: 'Google Advanced Data Analytics || In Progress',
+      issuer: 'Coursera',
+      date: '2026',
+      /*credentialId: 'MLOPS-2023-006',*/
+      /*verifyUrl: 'https://coursera.org/verify/specialization/YYYYYYYY',*/
       logo: '🔷', // Placeholder for Coursera logo
-      description: 'Specialization focused on deploying ML models in production environments.',
-      skills: ['MLOps', 'Model Deployment', 'Monitoring', 'CI/CD for ML', 'Data Versioning'],
-      featured: false,
+      description: 'Build regression and machine learning models to analyze and interpret data. Create data visualizations and apply statistical methods to investigate data',
+      skills: ['Machine Learning', 'Model Deployment', 'Monitoring', 'CI/CD for ML', 'Data Science', 'Descriptive Statistics'],
+      featured: true,
       status: 'active'
     },
     {
       id: 7,
-      name: 'Natural Language Processing Specialization',
-      issuer: 'Coursera (DeepLearning.AI)',
-      date: '2022',
-      credentialId: 'NLP-SPEC-2022-007',
-      verifyUrl: 'https://coursera.org/verify/specialization/ZZZZZZZZ',
+      name: 'Google Data Analytics || In Progress',
+      issuer: 'Coursera',
+      date: '2026',
+      /*credentialId: 'NLP-SPEC-2022-007',*/
+      /*verifyUrl: 'https://coursera.org/verify/specialization/ZZZZZZZZ',*/
       logo: '🔷', // Placeholder for Coursera logo
-      description: 'Comprehensive coverage of NLP techniques including transformers and attention mechanisms.',
-      skills: ['NLP', 'Transformers', 'BERT', 'Attention Mechanisms', 'Sentiment Analysis'],
-      featured: false,
+      description: 'Understand how to clean and organize data for analysis, and complete analysis and calculations using spreadsheets, SQL and R programming.',
+      skills: ['Data Analysis', 'Data Validation', 'Data Cleansing', 'Interviewing Skills', 'Data Structures', 'Data Presentation', 'Data Ethics', 'Dashboard', 'R (Software)', 'Tableau Software'],
+      featured: true,
       status: 'active'
     },
     {
       id: 8,
-      name: 'Computer Vision Nanodegree',
-      issuer: 'Udacity',
-      date: '2022',
-      credentialId: 'CV-ND-2022-008',
-      verifyUrl: 'https://confirm.udacity.com/XXXXXXXX',
+      name: 'Google Cloud Data Analytics || In Progress',
+      issuer: 'Google',
+      date: '2026',
+      /*credentialId: 'CV-ND-2022-008',*/
+      /*verifyUrl: 'https://confirm.udacity.com/XXXXXXXX',*/
       logo: '🟣', // Placeholder for Udacity logo
-      description: 'Comprehensive program covering computer vision techniques and applications.',
-      skills: ['Image Processing', 'Object Detection', 'Facial Recognition', 'SLAM', 'Deep Learning for CV'],
-      featured: false,
+      description: 'This certificate program is your launchpad – a carefully curated mix of expert instruction and real-world challenges. You\'ll build a portfolio of impressive projects, showcasing to employers that you can analyze, visualize, and communicate data.',
+      skills: ['Cloud Data Analytics', 'Data Management and Storage in the Cloud', 'Data Transformation in the Cloud', 'How to Visualize Data in the Cloud'],
+      featured: true,
       status: 'active'
-    }*/
+    },
+    {
+      id: 9,
+      name: 'Deep Learning Fundamentals || In Progress',
+      issuer: 'WorldQuant University',
+      date: '2026',
+      /*credentialId: 'CV-ND-2022-008',*/
+      /*verifyUrl: 'https://confirm.udacity.com/XXXXXXXX',*/
+      logo: '🟣', // Placeholder for Udacity logo
+      description: 'You\'ll develop skills in convolutional neural networks for image processing, recurrent networks for sequential data, and generative models. You\'ll learn to handle training challenges like vanishing gradients and implement model optimization best practices.',
+      skills: ['Deep Learning Fundamentals'],
+      featured: true,
+      status: 'active'
+    }
   ];
 
   const containerVariants = {

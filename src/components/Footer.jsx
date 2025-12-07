@@ -21,7 +21,7 @@ const Footer = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:scholarshipasa9@gmail.com',
+      href: 'mailto:abdussalam@abumusalab.com.ng',
       color: 'hover:text-red-600',
     },
     /*{
@@ -107,10 +107,10 @@ const Footer = () => {
                 <p className="text-muted-foreground">
                   <strong>Email:</strong>{' '}
                   <a
-                    href="mailto:scholarshipasa9@gmail.com"
+                    href="mailto:abdussalam@abumusalab.com.ng"
                     className="text-primary hover:text-primary/80 transition-colors"
                   >
-                    scholarshipasa9@gmail.com
+                    abdussalam@abumusalab.com.ng
                   </a>
                 </p>
                 <p className="text-muted-foreground">
