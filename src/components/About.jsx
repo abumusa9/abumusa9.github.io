@@ -3,6 +3,8 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Award, Code, Users, Zap } from 'lucide-react';
 
+console.log("About.jsx updated", Date.now());
+
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.1 });
