@@ -10,6 +10,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/", // ✅ personal site repo
+  base: "./",   // ✅ REQUIRED for GitHub Pages + custom domain
 })
 
