@@ -54,7 +54,7 @@ const Projects = () => {
       category: 'computer-vision',
       technologies: ['Python', 'YOLO', 'PyTorch', 'CUDA', 'ROS'],
       github: 'https://github.com/abumusa9/object-detection',
-      demo: "https://objectdetector.mooo.com",
+      demo: "https://abumusalab.com.ng/object-detection/",
       featured: true,
       metrics: {
         accuracy: '98%',
